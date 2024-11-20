@@ -21,9 +21,6 @@ export default function MovieCard({
 
   const posterImage = `${baseUrl}/${size}/${poster_path}`;
 
-  //edit the release year.
-  const date = new Date(release_date);
-
   return (
     <div className="flex flex-col bg-main-primary-800/80 backdrop-blur-sm pt-3 px-3 pb-4 rounded-xl">
       <Link
@@ -46,7 +43,7 @@ export default function MovieCard({
 
         <h2 className="text-base font-semibold my-3">{title}</h2>
         <h4 className="mb-1">
-          <em>Release date: {dateFormatter(date)}</em>
+          <em>Release date: {dateFormatter(release_date)}</em>
         </h4>
       </Link>
 

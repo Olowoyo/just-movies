@@ -5,8 +5,7 @@ export async function getMovieDetail(movieId: number) {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YWViNzM5MTRjOWM4NTBiZWEyZTFiMzE3MWYxNTkzZSIsIm5iZiI6MTczMTk0MTg2OC42ODM1NDUsInN1YiI6IjY1YjE2YTE5MmZlMmZhMDE5MzNkMmU4MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DqXIJix1YP0DYzEU-N6Fp8jxyEg2qOFEs1AVPbdYc0g",
+      Authorization: `Bearer ${process.env.MOVIEDB_KEY}`,
     },
   };
 
