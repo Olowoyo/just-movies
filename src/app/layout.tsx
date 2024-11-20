@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import Image from "next/image";
-import backgroundImage from "../../public/backgroundImage.png";
-
 import { Roboto_Serif } from "next/font/google";
 import Header from "@/components/Header";
 
