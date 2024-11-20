@@ -27,15 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${Roboto.className} antialiased relative`}>
-        <Image
-          className="object-cover -z-50"
-          placeholder="blur"
-          quality={10}
-          fill
-          src={backgroundImage}
-          alt="Just Movie - Background Image"
-        />
+      <body className={`${Roboto.className} antialiased`}>
         <Header />
 
         <main className="container mx-auto px-10">{children}</main>

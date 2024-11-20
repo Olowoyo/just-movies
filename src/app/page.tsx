@@ -4,7 +4,14 @@ import Spinner from "@/components/Spinner";
 import Link from "next/link";
 import { Suspense } from "react";
 
-export default function Home() {
+type ParamsT = {
+  searchParams: Promise<{ [key: string]: string }>;
+};
+
+export default async function Home({ searchParams }: ParamsT) {
+  const { search } = await searchParams;
+  const movie = search ?? "all";
+
   return (
     <section className="my-20">
       <h1 className="md:text-4xl text-3xl font-semibold mb-4">PopularMovies</h1>
@@ -31,7 +38,7 @@ export default function Home() {
       </div>
 
       <Suspense fallback={<Spinner />}>
-        <PopularMovies />
+        <PopularMovies key={search} search={movie} />
       </Suspense>
     </section>
   );
